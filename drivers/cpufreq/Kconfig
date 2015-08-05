@@ -170,6 +170,15 @@ config CPU_FREQ_DEFAULT_GOV_WHEATLEY
 	select CPU_FREQ_GOV_PERFORMANCE
 	help
 		Use the CPUFreq governor 'wheatley' as default.
+		
+config CPU_FREQ_DEFAULT_GOV_DYNAMIC
+	bool "dynamic"
+	select CPU_FREQ_GOV_DYNAMIC
+	help
+	  Use the CPUFreq governor 'dynamic' as default. This allows
+	  you to get a full dynamic cpu frequency capable system by simply
+	  loading your cpufreq low-level hardware driver, using the
+	  'dynamic' governor for latency-sensitive workloads.
 
 endchoice
 
@@ -325,6 +334,19 @@ config CPU_FREQ_GOV_INTELLIMM
 config CPU_FREQ_GOV_WHEATLEY
 	tristate "'wheatley' cpufreq governor"
 	depends on CPU_FREQ
+
+config CPU_FREQ_GOV_DYNAMIC
+	tristate "'dynamic' cpufreq policy governor"
+	help
+	  'dynamic' - This driver adds a dynamic cpufreq policy governor
+	  designed for latency-sensitive workloads.
+
+	  This governor attempts to reduce the latency of clock
+	  increases so that the system is more responsive to
+	  interactive workloads.
+
+	  To compile this driver as a module, choose M here: the
+	  module will be called cpufreq_dynamic.
 
 menu "x86 CPU frequency scaling drivers"
 depends on X86

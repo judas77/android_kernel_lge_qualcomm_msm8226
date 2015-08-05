@@ -195,7 +195,6 @@ export KBUILD_BUILDHOST := $(SUBARCH)
 ARCH		:= arm
 SUBARCH	:= arm
 ARCH		?= $(SUBARCH)
-CROSS_COMPILE	:= /home/nikita/SOURCE/arm-eabi-4.8/bin/arm-eabi-
 CROSS_COMPILE	?= $(CONFIG_CROSS_COMPILE:"%"=%)
 
 # Architecture as present in compile.h
@@ -373,9 +372,15 @@ KBUILD_CPPFLAGS := -D__KERNEL__
 
 KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs \
 		   -fno-strict-aliasing -fno-common \
-		   -Werror-implicit-function-declaration \
+		   -Wno-implicit-function-declaration \
 		   -Wno-format-security \
-		   -fno-delete-null-pointer-checks
+		   -w \
+		   -fno-delete-null-pointer-checks \
+		   -Wno-sequence-point \
+	   	   -fno-delete-null-pointer-checks \
+		   -Wno-unused-variable \
+		   -Wno-sizeof-pointer-memaccess
+		   
 KBUILD_AFLAGS_KERNEL :=
 KBUILD_CFLAGS_KERNEL :=
 KBUILD_AFLAGS   := -D__ASSEMBLY__
