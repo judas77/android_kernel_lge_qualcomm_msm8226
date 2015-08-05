@@ -3,12 +3,15 @@
 # Linux/arm 3.4.0 Kernel Configuration
 #
 
+<<<<<<< HEAD
 CONFIG_FORCE_FAST_CHARGE=y
 CONFIG_INTELLI_PLUG=y
 CONFIG_ALUCARD_HOTPLUG=y
 CONFIG_KSM_CHECK_PAGE=y
 CONFIG_DYNAMIC_FSYNC=y
 CONFIG_POWERSUSPEND=y
+=======
+>>>>>>> parent of bc46956... Add USB forced fast charge v2 support
 
 CONFIG_ARM=y
 CONFIG_ARM_HAS_SG_CHAIN=y
