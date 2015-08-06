@@ -16,6 +16,20 @@ config MACH_MSM8226_G2MDS_GLOBAL
     bool "MSM8226 G2MDS GLOBAL"
     help
       Support for the Qualcomm MSM8226 G2MDS GLOBAL device.
+      
+config MACH_MSM8226_W7N_GLOBAL_COM
+        depends on ARCH_MSM8226
+        select MACH_LGE
+        bool "MSM8226 W7N GLOBAL COM"
+        help
+          Support for the Qualcomm MSM8226 W7N Single Sim device.
+
+config MACH_MSM8226_W7DSN_GLOBAL_COM
+        depends on ARCH_MSM8226
+        select MACH_LGE
+        bool "MSM8226 W7DSN GLOBAL COM"
+        help
+          Support for the Qualcomm MSM8226 W7N Dual Sim Global Common device.
 
 config LCD_LGIT_VIDEO_WXGA
 	depends on ARCH_MSM8226
