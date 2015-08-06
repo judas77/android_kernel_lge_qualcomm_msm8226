@@ -102,6 +102,8 @@ endif
 ifeq ($(CONFIG_MACH_LGE),y)
 	dtb-$(CONFIG_MACH_MSM8226_G2MDS_GLOBAL) += msm8226-g2mds.dtb
 	dtb-$(CONFIG_MACH_MSM8926_G2M_GLOBAL)		+= msm8226-g2m.dtb
+	dtb-$(CONFIG_MACH_MSM8226_W7DSN_GLOBAL) += msm8226-w7dsn.dtb
+	dtb-$(CONFIG_MACH_MSM8926_W7N_GLOBAL)		+= msm8226-w7n.dtb	
 
 else # not CONFIG_MACH_LGE
 	dtb-$(CONFIG_ARCH_MSM8226)	+= msm8226-sim.dtb
