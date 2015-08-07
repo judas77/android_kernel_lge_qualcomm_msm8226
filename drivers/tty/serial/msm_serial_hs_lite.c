@@ -50,9 +50,7 @@
 #include <linux/types.h>
 #include <asm/byteorder.h>
 #include <mach/board.h>
-#ifdef CONFIG_MACH_LGE
 #include <mach/board_lge.h>
-#endif
 #include <mach/msm_serial_hs_lite.h>
 #include <mach/msm_bus.h>
 #include <asm/mach-types.h>

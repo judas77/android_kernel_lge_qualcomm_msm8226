@@ -78,10 +78,8 @@
 #define WLED_8_BIT_SHFT			0x08
 #define WLED_MAX_DUTY_CYCLE		0xFFF
 
-#ifdef CONFIG_MACH_LGE
 #define WLED_CABC_EN_MASK		0x80
 #define WLED_CABC_EN_ON			0x80
-#endif //               
 
 #define WLED_SYNC_VAL			0x07
 #define WLED_SYNC_RESET_VAL		0x00
@@ -235,7 +233,8 @@
 #define KPDBL_MODULE_EN			0x80
 #define KPDBL_MODULE_DIS		0x00
 #define KPDBL_MODULE_EN_MASK		0x80
-
+#define WLED_CABC_EN_MASK		0x80
+#define WLED_CABC_EN_ON			0x80
 /**
  * enum qpnp_leds - QPNP supported led ids
  * @QPNP_ID_WLED - White led backlight
